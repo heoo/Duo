@@ -199,6 +199,7 @@ class ControllerBase extends ControllerAbstract
             }
 
             $this->view->setVar('data',$result);
+            $this->view->setVar('page',$getData['page']);
         }
     }
 

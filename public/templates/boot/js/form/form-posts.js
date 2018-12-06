@@ -66,6 +66,9 @@ var FormPostsValidation = function () {
                         if($("input[name='ctype']").val()){
                             url = '?ctype='+$("input[name='ctype']").val();
                         }
+                        if($("input[name='page']").val()){
+                            url += '&page='+$("input[name='page']").val();
+                        }
 
                         if(result.errorNo==0){
 
