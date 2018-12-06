@@ -1,0 +1,66 @@
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+body{ background-color:#c6e7e0; background-repeat:no-repeat; background-position:center top;width:100%;margin-left:auto;margin-right:auto;position:absolute;height:100%;padding: 0px;margin: 0px; }
+ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: sans-serif; color: #222; -webkit-tab-size: 4; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; }
+
+.logodiv{position:absolute;left:50%;top:33px;z-index:999;height:100px; margin-left:-50px;}
+.logo {height:50px;text-align:center}
+.guanyu {height:30px;text-align:center;margin-top:10px}
+.lianxi{text-align:center}
+.indexlink{position:absolute;width:100%;height:100%;right:0px;left:0px;top:0px;bottom:0px;background-size:auto 100% !important;-moz-background-size:auto 100%; -webkit-background-size: auto 100%;background-repeat:no-repeat; background-position:center top;  }
+
+.navbox {width:350px;height:30px; position:absolute; left:18px;top:32px;z-index:999999}
+.navbox a{display:block;height:15px;line-height:15px;margin-right:30px}
+
+/* universal sly */
+.slyWrap { margin: 20px 0 ;  }
+
+.sly { overflow: hidden; }
+.sly > ul { list-style: none; margin: 0; padding: 0; }
+.sly > ul li { position: relative; margin: 0; padding: 0; text-align: center; cursor: pointer; }
+
+
+/* Horizontal examples */
+#horizontal .slyWrap { margin:auto;/*margin: 3em 0; width:1000px; margin-left:auto;margin-right:auto;margin-top:10%*/}
+
+#horizontal .scrollbar { margin: 1em 0; height: 5px;width: 100px; height: 100%; }
+
+
+#horizontal .example2 .sly { height: 500px; }
+#horizontal .example2 .sly ul { height: 500px; }
+
+#horizontal .example2 .sly ul li { padding: 10px; float: left; width: 8px; height: 100%; margin: 0 10px 0 10px; font-size: 5px; line-height: 20px; word-wrap:break-word;word-break:nomal; position:relative}
+#horizontal .example2 .sly ul li a {width:5px; position:absolute;top:50%;color: #a6a6a6; opacity: 0.5;}
+
+#horizontal .example2 .sly ul li.active { float: left; width: 28px; height: 100%; margin: 0 25px 0 25px; font-size: 36px; line-height: 72px; }
+#horizontal .example2 .sly ul li.active a {  color: #000000; font-size: 36px; opacity: 1; line-height: 36px; }
+
+#horizontal .example2 .sly ul li.slid { float: left; width: 28px; height: 100%; margin: 0 25px 0 25px; font-size: 24px; line-height: 48px; }
+#horizontal .example2 .sly ul li.slid a { font-size:24px; color: #000000; opacity: 0.7; line-height: 24px; }
+
+
+
+
+@media (min-width: 767px) {
+    #menu-nav {
+        display: none;
+    }
+
+    .logo a {
+        color: #333;
+        font-size: 23px;
+    }
+
+    .navbox a {
+        float: left;
+        color: #333;
+        font-size: 14px;
+    }
+}
+
+#loadings{ background: #c6e7e0; width: 100%; height: 100%; position: absolute; z-index: 0;background-image:url(http://en.duoi.com/Uploads/201507/55ab641a8d5e0.gif); background-repeat: no-repeat;  background-position: center center;}

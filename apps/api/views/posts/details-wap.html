@@ -1,0 +1,35 @@
+{{partial("layouts/wap-head")}}
+
+<link rel="stylesheet" href="/templates/waterfall/css/bootstrap.css" />
+<link rel="stylesheet" href="/templates/waterfall/css/jquery.fullPage.css">
+<link rel="stylesheet" href="/templates/waterfall/css/style.css">
+<script src="/templates/waterfall/js/jquery.fullPage.js"></script>
+<script src="/templates/waterfall/js/bootstrap.min.js"></script>
+<script src="/templates/waterfall/js/index.js"></script>
+<div id="dowebok">
+{% for key,image in attachment %}
+    <div class="section" data-key="{{key}}" data-val="{{image}}" style="background: url({{image}}) center; background-size: cover;"> </div>
+{% endfor %}
+</div>
+
+<input type="hidden" value="{{next}}" id="next">
+<input type="hidden" value="{{previous}}" id="previous">
+<div class="shadow-img"></div>
+        <img src="{{src}}" style="display: none;" class="btn">
+
+
+<script>
+//    $(function () {
+//        $(".section").click(function () {
+//            var oDiv1 = $(this).attr('data-val');
+//            $(".btn").attr("src",oDiv1).show();
+//            $(".shadow-img").css("display","block")
+//        });
+//        $(".shadow-img").click(function () {
+//            $(".shadow-img").css("display","none");
+//            $(".btn").attr("src","{{src}}").hide();
+//        });
+//
+//    });
+
+</script>

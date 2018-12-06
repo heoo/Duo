@@ -1,0 +1,41 @@
+<div id="list" class="menus-div-{{ControllerName}}">
+    <ul>
+        {% if ControllerName != 'index'%}
+        <li>
+            <a class="link link--kukuri menus-a-{{ControllerName}} first" href="/"><img src="/templates/waterfall/image/{{ControllerName}}-logo.png"></a>
+        </li>
+        {% endif %}
+        <li>
+            <a class="link link--kukuri menus-a-{{ControllerName}} decode" data-val="{{ControllerName}}-decode" href="/{{ModuleName}}/posts/index?cid=6">
+                <img src="/templates/waterfall/image/{{ControllerName}}-decode.png">
+                <em>研发/其他</em>
+            </a>
+        </li>
+        <li>
+            <a class="link link--kukuri menus-a-{{ControllerName}} urbanism" data-val="{{ControllerName}}-urbanism"  href="/{{ModuleName}}/posts/index?cid=3"><img src="/templates/waterfall/image/{{ControllerName}}-urbanism.png"><em>项目</em></a>
+        </li>
+
+        <li>
+            <a class="link link--kukuri menus-a-{{ControllerName}} office" data-val="{{ControllerName}}-office"  href="/{{ModuleName}}/posts/details?id="><img src="/templates/waterfall/image/{{ControllerName}}-office.png"><em>简介及联系</em></a>
+        </li>
+
+    </ul>
+</div>
+
+<script>
+    $(function () {
+        $('#list li').mouseover(function () {
+            var obj = $(this).find('a');
+            var png = obj.attr('data-val');
+            if(png && png != undefined)
+                obj.find('img').attr('src','/templates/waterfall/image/'+png+'-hover.png');
+                obj.find('em').show();
+        }).mouseout(function () {
+            var obj = $(this).find('a');
+            var png = obj.attr('data-val');
+            if (png && png != undefined)
+                obj.find('img').attr('src', '/templates/waterfall/image/' + png + '.png');
+                obj.find('em').hide();
+        })
+    });
+</script>
