@@ -56,13 +56,36 @@ $(document).ready(function() {
 		TweenLite.to(el, 0.5, {css: {alpha: 1}});
 	});
 
-	// ładowanie obrazków
-	$('img.wait').addClass("hidden");
-	$('img.wait').imgpreload({
-		each: function() {
-			$(this).delay(200).fadeIn(400);
-		}
+	// btn (redirect)
+	$(".btn10.no-bg").hover(function() {
+		var el = $(this);
+		TweenLite.killTweensOf(el);
+		TweenLite.to(el, 0.2, {css:{backgroundColor: "#000"}});
+		TweenLite.to(el, 0.2, {css:{color: "#FFF"}, delay: 0});
+	}, function() {
+		var el = $(this);
+		TweenLite.killTweensOf(el);
+		TweenLite.to(el, 0.4, {css:{backgroundColor: "inherit"}, delay: 0});
+		TweenLite.to(el, 0.4, {css:{color: "#000"}, delay: 0});
 	});
+
+	// wyświetlam error na środku (o ile istnieje);	
+	if ($(".design-error").length > 0){
+		var er = $(".design-error .info");
+		var erY = ($(window).height() - 200) / 2 - er.height();		
+		TweenLite.to(er, 0.4, {css: {alpha : 1, marginTop: erY + "px"}, delay: 0.7, ease:Back.easeOut});
+	}
+
+
+	// wechat social icons widget - modal window with qr code
+	var $weChatModal = $("#wechat-modal");
+	if ($weChatModal.length) {
+		$("body").on("click", "a.s-wechat, #wechat-modal", function(e){
+			e.preventDefault();
+			$weChatModal.toggleClass("active");
+		});
+	}
+
 
 });
 

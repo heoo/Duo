@@ -1,0 +1,71 @@
+{% if isMobile %}
+    <link rel="stylesheet" href="/templates/waterfall/css/bootstrap.css" />
+    <script src="/templates/waterfall/js/index.js"></script>
+    <script src="/templates/waterfall/js/jquery.fullPage.js"></script>
+
+    <link rel="stylesheet" href="/templates/waterfall/css/style.css">
+    <script src="/templates/waterfall/js/bootstrap.min.js"></script>
+
+    {{partial("layouts/wap-head")}}
+
+{% else %}
+
+    <script src="/templates/waterfall/js/project.js" type="text/javascript"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+    <div class="loadings">
+        <!--<img onclick="showMarsk();" class="index-logo" src="/templates/waterfall/image/ilogo.png">-->
+        <span class="logo" onclick="showMarsk();">DUO</span>
+        <img class="index-bg" src="/templates/waterfall/image/lines.png">
+        <!--<img class="index-bg" src="/templates/waterfall/image/lines.png" style="background: rgb(140,140,140);">-->
+    </div>
+<script>
+    function showMarsk() {
+
+        $('.index-bg').css({'background':'rgb(140,140,140)','transition':'background 1S'});
+        $('.logo').animate({'top':'-20.5%','left':'35%','-moz-opacity': '0.7','-khtml-opacity': '0.7','filter':'alpha(opacity=0.7)','opacity':'0.7','font-size':'12em','color':'#FFFFFF','transition':'color 0.5S'},1500,function () {
+            $('.main').toggle('fast');
+            $('.marks').toggle('fast').animate({'z-index':500});
+            $('.menus-div-index').slideDown();
+        });
+    }
+    function hideMarsk() {
+        $('.menus-div-index').animate({'height':'toggle'},500,function () {
+                $('.marks').toggle('fast').animate({'z-index':-1});
+                $('.index-bg').css({'background':'rgb(255,255,255)','transition':'background 1S'});
+                $('.logo').animate({'top':'37%','left':'35%','-moz-opacity': '1','-khtml-opacity': '1','filter':'alpha(opacity=1)','opacity':'1','font-size':'14em','color':'#393636','transition':'color 0.5S'},1500,function () {
+                    $('.main').toggle('fast');
+                });
+            });
+        $('.foot-more').show();
+    }
+
+    $(document).ready(function(){
+        $("#foot-more").click(function() {
+            $(window).scrollTop(0);
+            showMarsk();
+            $('.foot-more').hide();
+        });
+    });
+</script>
+
+{% endif%}
+
+{{partial("layouts/masonry")}}
+
+{% if isMobile==false %}
+<!--<div class="marks" style="display: block;z-index: 500 !important;">-->
+
+    <div class="marks" onclick="hideMarsk();" style="display: none;">
+        <div class="tc_x">
+                <!--<span><a style="float:right;"><img src="/templates/waterfall/ckplayer/close.png" border=0 /></a></span>-->
+            {{ partial("layouts/menus") }}
+
+        </div>
+        <div class="bg" id="jiajbg"></div>
+
+    </div>
+
+{% endif %}
+
+

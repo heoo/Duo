@@ -1,53 +1,408 @@
-<div class="main">
+<script src="/templates/waterfall/js/project.js" type="text/javascript"></script>
+<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-    {{ partial("layouts/top") }}
+<div id="work-dir" class="dir_view_full view_full masonry">
 
-    <div id="work-dir" class="">
-
-        {{ partial("layouts/test") }}
-
-        {% if data %}
-        {% for key,project in data %}
-        <div class="project-item {{project['class']}}" data-id="{{project['id']}}" data-key="{{key}}" ratio="{{project['ratio']}}">
-            <div class="cf"></div>
-            <div class="project-item-img" data-id="{{project['id']}}" >
-                <img id="img{{project['id']}}" src="{{project['thumb']}}" border="0" class="{{project['class']}}" data-id="{{project['id']}}" data-id="{{project['id']}}"  alt="{{project['name']}}" data-options='{{project['attachment']}}'>
-            </div>
-            <div class="info alpha0" data-url="/{{ModuleName}}/posts/details?id={{project['id']}}">
-                <div class="inner">
-                    <a href="/{{ModuleName}}/posts/details?id={{project['id']}}">{{project['name']}}</a>
-                </div>
-            </div>
+<div class="project-list project-item alpha0 masonry-brick" data-id="1368829755">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1368829755">
+        <img src="/templates/waterfall/image/img/0d8c76bc02_Thumbnail_10DESIGN_HuafaPlaza[3].jpg" alt="" border="0" class="" data-id="1368829755">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/zhuhai-huafa-plaza">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/zhuhai-huafa-plaza">Zhuhai Huafa Plaza</a>
         </div>
-        {% endfor %}
-        {% endif %}
-
-        <div class="cf"></div>
     </div>
+</div>
 
-    <div class="popup overlay hidden"></div>
-    <div class="preloader overlay hidden">
-        <div class="preloader-inner"></div>
+<div class="project-list project-item vertical alpha0 masonry-brick" data-id="1068069357">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
     </div>
-
-
-    {% if ControllerName == 'index' %}
-    <div class="foot-more" id="foot-more" >
-        <span >More</span>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1068069357">
+        <img src="/templates/waterfall/image/img/89fe374354_Thumbnail_10design_China_Zhuhai_.jpg" alt="" border="0" class="vertical" data-id="1068069357">
     </div>
-    {% endif %}
+    <div class="info alpha0" data-url="/work/architecture/selected/zhuhai-international-convention-centre-phase-1">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/zhuhai-international-convention-centre-phase-1">Zhuhai International Convention Centre Phase 1</a>
+        </div>
+    </div>
+</div>
 
+<div class="project-list project-item large alpha0 masonry-brick" data-id="768854789">
+    <div class="ceils"></div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="768854789">
+        <img src="/templates/waterfall/image/img/ac118ecbae_Thumbnail_10DESIGN_Wuhan_Greatwa.jpg" alt="" border="0" class="large" data-id="768854789">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/greatwall-complex">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/greatwall-complex">Greatwall Complex</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1164433663">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1164433663">
+        <img src="/templates/waterfall/image/img/94866b1bf2_Thumbnail_10DESIGN_China_Zhuhai_.jpg" alt="" border="0" class="default" data-id="1164433663">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/jinwan-aviation-city-industrial-service-centre">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/jinwan-aviation-city-industrial-service-centre">Jinwan Aviation City Industrial Service Centre</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item vertical alpha0 masonry-brick" data-id="1774202123">
+    <div class="ceils"></div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1774202123">
+        <img src="/templates/waterfall/image/img/1ecfd21194_Thumbnail_10DESIGN_UAE_BaseJumpT.jpg" alt="" border="0" class="vertical" data-id="1774202123">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/waterfront-base-jump-tower">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/waterfront-base-jump-tower">Waterfront Base Jump Tower</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="2077666221">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="2077666221">
+        <img src="/templates/waterfall/image/img/276321aa21_Thumbnail_10DESIGN_AbuDhabi_AlMa.jpg" alt="" border="0" class="default" data-id="2077666221">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/al-mashtal-design-competition">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/al-mashtal-design-competition">Al Mashtal Design Competition</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="project-list project-item vertical alpha0 masonry-brick" data-id="693008802">
+    <div class="ceils"></div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="693008802">
+        <img src="/templates/waterfall/image/img/d191274a20_Thumbnail_10Design_China_Huizhou.jpg" alt="" border="0" class="vertical" data-id="693008802">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/citic-city-plaza">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/citic-city-plaza">CITIC City Plaza</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1708752498">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1708752498">
+        <img src="/templates/waterfall/image/img/53c8e4c832_Thumbnail_10Design_China_Zhuhai_.jpg" alt="" border="0" class="default" data-id="1708752498">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/the-core-of-zhuhai-city-heart">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/the-core-of-zhuhai-city-heart">The Core of Zhuhai City Heart</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="586335695">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="586335695">
+        <img src="/templates/waterfall/image/img/a3bcc384e2_05_10DESIGN_Dubai_BluewatersResi.jpg" alt="" border="0" class="" data-id="586335695">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/bluewaters-residences">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/bluewaters-residences">Bluewaters Residences</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1819236463">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1819236463">
+        <img src="/templates/waterfall/image/img/1a7260ed9c_04_10design_China_Zhuhai_MOA_mod.jpg" alt="" border="0" class="default" data-id="1819236463">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/museum-of-art">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/museum-of-art">Museum of Art</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1947732124">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1947732124">
+        <img src="/templates/waterfall/image/img/a80537faa4_Thumbnail_10DESIGN_InertiaMLP[1].jpg" alt="" border="0" class="" data-id="1947732124">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/jefaira-seafront-masterplan">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/jefaira-seafront-masterplan">Jefaira Seafront Masterplan</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1483620222">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1483620222">
+        <img src="/templates/waterfall/image/img/56d4b15d84_Thumbnail_10Design_UAE_Dubai_AlB.jpg" alt="" border="0" class="default" data-id="1483620222">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/seventh-heaven-at-al-barari">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/seventh-heaven-at-al-barari">Seventh Heaven at Al Barari</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item large alpha0 masonry-brick" data-id="1538219367">
+    <div class="ceils"></div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1538219367">
+        <img src="/templates/waterfall/image/img/1db8592b63_Thumbnail_10DESIGN_Zhuhai_Hengqi.jpg" alt="" border="0" class="large" data-id="1538219367">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/hengqin-wanxiang-world">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/hengqin-wanxiang-world">China Resources' Hengqin Wanxiang World</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1317610770">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1317610770">
+        <img src="/templates/waterfall/image/img/ff30024b1a_Thumbnail_10Design_PhotonicColle.jpg" alt="" border="0" class="default" data-id="1317610770">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/the-fujian-professional-photonic-technical-college">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/the-fujian-professional-photonic-technical-college">The Fujian Professional Photonic Technical College</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1113301534">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1113301534">
+        <img src="/templates/waterfall/image/img/d39762ea1f_01_10design_China_Shizimen_Bridg.jpg" alt="" border="0" class="default" data-id="1113301534">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/shizimen-gateway-bridge-the-infinity-loop">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/shizimen-gateway-bridge-the-infinity-loop">Shizimen Gateway Bridge (The Infinity Loop)</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item vertical alpha0 masonry-brick" data-id="280195565">
+    <div class="ceils"></div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="280195565">
+        <img src="/templates/waterfall/image/img/e2867af264_Thumbnail_10Design_Weihai_9Drago.jpg" alt="" border="0" class="vertical" data-id="280195565">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/9-dragon-bay-mixed-use-development">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/9-dragon-bay-mixed-use-development">9 Dragon Bay Mixed Use Development</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item vertical alpha0 masonry-brick" data-id="1176987486">
+    <div class="ceils"></div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1176987486">
+        <img src="/templates/waterfall/image/img/6cc1c82872_Thumbnail_10design_China_Kunming.jpg" alt="" border="0" class="vertical" data-id="1176987486">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/yunnan-hotel">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/yunnan-hotel">Yunnan Hotel</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item large alpha0 masonry-brick" data-id="138260251">
+    <div class="ceils"></div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="138260251">
+        <img src="/templates/waterfall/image/img/07c47f241e_Thumbnail_10Design_Shanghai_BayV.jpg" alt="" border="0" class="large" data-id="138260251">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/bay-valley-science-technology-park">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/bay-valley-science-technology-park">Bay Valley Science &amp; Technology Park</a>
+        </div>
+    </div>
 </div>
 
 
 
-{% if isMobile==false %}
-<script src="/templates/waterfall/js/jquery.easing.1.3.js" type="text/javascript"></script>
-<script src="/templates/waterfall/js/EasePack.js" type="text/javascript"></script>
-<script src="/templates/waterfall/js/bundle_v4.js" type="text/javascript"></script>
+<div class="project-list project-item horizontal alpha0 masonry-brick" data-id="1447305401">
+    <div class="ceils"> </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1447305401">
+        <img src="/templates/waterfall/image/img/1ab5da5d4a_Thumbnail__10DESIGN_Dubai_LaRese.jpg" alt="" border="0" class="horizontal" data-id="1447305401">
+    </div>
+    <div class="info alpha0" data-url="/work/landscape/seventh-heaven-at-al-barari-LS">
+        <div class="inner">
+            <a href="/work/landscape/seventh-heaven-at-al-barari-LS">Seventh Heaven at Al Barari</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="449060583">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="449060583">
+        <img src="/templates/waterfall/image/img/77ca264ac4_Thumbnail_10DESIGN_China_SOHOLiv.jpg" alt="" border="0" class="default" data-id="449060583">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/soho-living">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/soho-living">SOHO Living</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1053714911">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1053714911">
+        <img src="/templates/waterfall/image/img/7b6289ee51_Thumbnail_10design_China_Dalian_.jpg" alt="" border="0" class="default" data-id="1053714911">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/dalian-library-design-competition_arch">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/dalian-library-design-competition_arch">Dalian Library Design Competition</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item horizontal alpha0 masonry-brick" data-id="1447305401">
+    <div class="ceils"> </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1447305401">
+        <img src="/templates/waterfall/image/img/1ab5da5d4a_Thumbnail__10DESIGN_Dubai_LaRese.jpg" alt="" border="0" class="horizontal" data-id="1447305401">
+    </div>
+    <div class="info alpha0" data-url="/work/landscape/seventh-heaven-at-al-barari-LS">
+        <div class="inner">
+            <a href="/work/landscape/seventh-heaven-at-al-barari-LS">Seventh Heaven at Al Barari</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1395004662">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1395004662">
+        <img src="/templates/waterfall/image/img/a56e852e1a_Thumbnail_10Design_Dubai_HuaweiU.jpg" alt="" border="0" class="" data-id="1395004662">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/corporate-headquarters-uae">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/corporate-headquarters-uae">Huawei UAE Headquarters</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="599775344">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="599775344">
+        <img src="/templates/waterfall/image/img/32a5da847c_Thumbnail_10Design_China_Heart_o.jpg" alt="" border="0" class="default" data-id="599775344">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/central-zhuhai-mixed-use-development">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/central-zhuhai-mixed-use-development">Central Zhuhai Mixed Use Development</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="489602270">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="489602270">
+        <img src="/templates/waterfall/image/img/1ccb5fae96_Thumbnail_10Design_UAE_Dubai_Mar.jpg" alt="" border="0" class="default" data-id="489602270">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/marina-islands-masterplan">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/marina-islands-masterplan">Marina Islands Masterplan</a>
+        </div>
+    </div>
+</div>
+
+<div class="project-list project-item alpha0 masonry-brick" data-id="1646909272">
+    <div class="ceils">
+        <div class="ceil ceil0 fl"></div>
+    </div>
+    <div class="cf"></div>
+    <div class="project-item-img" data-id="1646909272">
+        <img src="/templates/waterfall/image/img/400df13dc9_Thumbnail_10DESIGN_HuafaIntSeafr.jpg" alt="" border="0" class="default" data-id="1646909272">
+    </div>
+    <div class="info alpha0" data-url="/work/architecture/selected/huafa-international-seafront-garden">
+        <div class="inner">
+            <a href="https://www.10design.co/work/architecture/selected/huafa-international-seafront-garden">Huafa International Seafront Garden</a>
+        </div>
+    </div>
+</div>
+
+<div class="cf"></div>
+
+</div>
+
+
+<div class="popup overlay hidden"></div>
+<div class="preloader overlay hidden">
+    <div class="preloader-inner">
+
+    </div>
+</div>
+
+{% if ControllerName == 'index' %}
+<div class="foot-more" id="foot-more" >
+    <span >More</span>
+</div>
 {% endif %}
 
 
+
+
+<script src="/templates/waterfall/js/jquery.elasticslider.0.1.js" type="text/javascript"></script>
+<script src="/templates/waterfall/js/jquery.easing.1.3.js" type="text/javascript"></script>
 <script src="/templates/waterfall/js/TweenLite.js" type="text/javascript"></script>
-<script src="/templates/waterfall/js/design-main.js" type="text/javascript"></script>
+<script src="/templates/waterfall/js/EasePack.js" type="text/javascript"></script>
 <script src="/templates/waterfall/js/CSSPlugin.js" type="text/javascript"></script>
+<script src="/templates/waterfall/js/design-main.js" type="text/javascript"></script>

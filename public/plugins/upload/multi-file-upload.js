@@ -532,7 +532,7 @@
                 $percent.attr('data-rel',response.path);
 
                 if(response.isFlash){
-                    $('#thumb').val(response.path);
+                    $('#flash').val(response.path);
                 }else{
                     var oPath = $('#multi-thumb').val();
                     var nPath = oPath+','+ response.path;

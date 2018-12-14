@@ -41,11 +41,7 @@ $(function () {
             $('.top').hide();
         }
     })
-
-    // $('body').css({'width':$(window).width()})
-    // $('.loadings').css({'width':$(window).width()});
-    // $('.logo').css({'top':$(window).height()/3,'left':$(window).width()/3});
-
+ 
     var p=0,t=0;
     $(window).scroll(function(e){
 

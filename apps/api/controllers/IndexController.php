@@ -18,20 +18,7 @@ class IndexController extends ControllerBase
     
     public function indexAction()
     {
-//        $Models = new Posts();
-//        $Models->setField(array('id'));
-//        $Models->setWhere(array('status'=>1,'language'=>$this->Language,'type'=>'posts','attachment'=>array('attachment','!=','')));
-//        $Models->setOrder(array('id'=>'DESC'));
-//        $res = $Models->findRec();
-//        $this->view->setVar('next',$res ? $res->id : 0);
-
         $result = $this->getPosts();
-//        if($result){
-//            foreach($result as $key=>$val){
-////                $val['name'] = self::strManipulation($val['name']);
-//                $result[$key] = $val;
-//            }
-//        }
         $this->view->setVar('data',$result['data']);
     }
 

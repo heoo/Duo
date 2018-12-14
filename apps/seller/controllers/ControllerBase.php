@@ -75,14 +75,12 @@ class ControllerBase extends ControllerAbstract
         $this->Models->setWhere($where);
         $data =  $this->Models->listRec();
         if($data){
-
             foreach($data->toArray() as $k=>$v){
 
                 $result['rows'][$k] = $v;
             }
             $result['total'] = $count;
         }
-
         $this->view->setVar("getData",$getData);
         $this->view->setVar('data',$result);
         $this->view->setVar('pageStr',$this->getNewPages($result['total'],$getData['page'],$getData['rows']));
@@ -229,7 +227,6 @@ class ControllerBase extends ControllerAbstract
     }
 
     private function getThumb($attachment,$class='default'){
-        $class = 'horizontal';
         $newname = '';
         $size = [
             'default'=>[700,453],
@@ -239,7 +236,6 @@ class ControllerBase extends ControllerAbstract
         ];
         if($attachment){
             $this->Imagine = new Imagine();
-
             $thumb = substr($attachment,0,strpos($attachment,','));
             $thumb = $thumb ? $thumb : $attachment;
             $newname = str_replace('.','thumb.',$thumb);

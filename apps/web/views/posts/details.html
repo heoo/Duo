@@ -19,7 +19,7 @@
 
 
 
-{% if data.thumb %}
+{% if data.flash %}
 <script src="/templates/duo-i/ckplayer/ckplayer.js"></script>
 
 <!--视频弹出按钮-->
@@ -39,7 +39,7 @@
     // 弹出视频方法
     function alertWin(n) {
         var flashvars = {
-            f: '{{data.thumb}}', // 视频url
+            f: '{{data.flash}}', // 视频url
             c: 1,
             b: 1
         };

@@ -110,13 +110,13 @@
 
                                                {% if images %}
                                                <ul class='filelist' style='border-bottom: 1px solid #ccc; margin-bottom: 5px;'>
-                                                   {% if data.thumb %}
+                                                   {% if data.flash %}
                                                    <li class="state-complete">
-                                                       <p class="imgWrap"><img src="{{data.thumb}}" onerror="javascript:this.src='/templates/duo-i/ckplayer/flash.jpg'"></p>
+                                                       <p class="imgWrap"><img src="{{data.flash}}" onerror="javascript:this.src='/templates/duo-i/ckplayer/flash.jpg'"></p>
                                                        <p class="progress"><span style="display: none; width: 0px;"></span></p>
                                                        <span class="success"></span>
                                                        <div class="file-panel" style="height: 0px;">
-                                                           <span class="cancel" data-rel="{{data.thumb}}" title="删除" data-type="flash">删除</span>
+                                                           <span class="cancel" data-rel="{{data.flash}}" title="删除" data-type="flash">删除</span>
                                                        </div>
                                                    </li>
                                                    {% endif %}
@@ -210,7 +210,7 @@
                             <input type="hidden" name="id" value="{{data.id}}" >
                             <input type="hidden" name="ctype" value="{{ctype}}">
                             <input type="hidden" name="page" value="{{page}}">
-                            <input type="hidden" id="thumb" name="thumb" value="{{data.thumb}}" >
+                            <input type="hidden" id="flash" name="flash" value="{{data.flash}}" >
                             <span for="digits" class="message alert-error"></span>
                         </div>
                     </fieldset>

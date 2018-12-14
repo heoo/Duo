@@ -13,6 +13,7 @@ class Posts extends \Catchtech\Extensions\Model\BaseModel
     protected $name;
     protected $class;
     protected $thumb;
+    protected $flash;
     protected $digest;
     protected $text;
     protected $attachment;
@@ -24,6 +25,22 @@ class Posts extends \Catchtech\Extensions\Model\BaseModel
     protected $created;
     protected $createdby;
     protected $updated;
+
+    /**
+     * @return mixed
+     */
+    public function getFlash()
+    {
+        return $this->flash;
+    }
+
+    /**
+     * @param mixed $flash
+     */
+    public function setFlash($flash)
+    {
+        $this->flash = $flash;
+    }
 
     /**
      * @return mixed

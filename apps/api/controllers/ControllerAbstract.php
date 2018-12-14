@@ -176,7 +176,6 @@ class ControllerAbstract extends Controller
     public function mobileRequest($location) {
         if($this->isMobile()) {
             $redirect = "http://".$_SERVER['HTTP_HOST'].$location;
-
             $this->response->redirect($redirect,true);
         }
     }
@@ -186,7 +185,6 @@ class ControllerAbstract extends Controller
         $number = 0;
         $where = array();
         if($id && in_array($type,array('next','previous'))){
-
             $Models = new Posts();
             $Models->setField(array('id'));
             $where['language'] = $this->Language;
@@ -199,15 +197,12 @@ class ControllerAbstract extends Controller
                 $Models->setWhere($where);
                 $res = $Models->findRec();
             }else{
-
                 $where['id'] = array('id','<',$id);
                 $Models->setWhere($where);
                 $Models->setOrder(array('id'=>'DESC'));
                 $res = $Models->findRec();
             }
-
             if($res){
-
                 $number = $res->id;
             }
         }
@@ -228,54 +223,15 @@ class ControllerAbstract extends Controller
         $Models->setLimit(50);
         $data = $Models->listRec();
         if($data){
-
-//$ratio1 = 700 / 453; //1.55   default
-//$ratio2 = 1200 / 777; //1.54  large
-//$ratio3 = 700 / 907;  //0.7  vertical
-            $classCount = [
-                'default' => ['count'=>0,'data'=>[]] ,
-                'large' => ['count'=>0,'data'=>[]] ,
-                'vertical'=> ['count'=>0,'data'=>[]] ,
-            ];
             foreach($data as $val){
                 if($val->attachment){
-                    $len = strpos($val->attachment,',');
-                    $thumb = $len ? substr($val->attachment,0,$len) : $val->attachment;
-                    $imgSize = getimagesize('http://'.$_SERVER['SERVER_NAME'].$thumb);
-                    $attachment = explode(',',$val->attachment);
                     $tmp = [
                         'id'=>$val->id,
                         'name'=>$val->name,
-                        'thumb'=>$thumb,
-                        'class'=>'default',
-                        'width'=>$imgSize[0],
-                        'height'=>$imgSize[1],
-                        'ratio' => sprintf('%.1f',$imgSize[0] / $imgSize[1]),
-                        'attachment'=>json_encode($attachment)
+                        'thumb'=>$val->thumb,
+                        'class'=>$val->class,
+                        'attachment'=>$val->attachment
                     ];
-                    if ($tmp['ratio'] == 0.5){
-                        $tmp['class'] = 'vertical';
-                        $classCount['vertical']['count'] += 1;
-                        $classCount['vertical']['data'][] = $tmp['id'];
-                    }else if($tmp['ratio'] == 2.0){
-                        $tmp['class'] = 'large';
-                        if($tmp['width'] < 1000){
-                            $tmp['class'] = 'transverse';
-                            $classCount['transverse']['count'] += 1;
-                            $classCount['transverse']['data'][] = $tmp['id'];
-                        }else{
-                            $classCount['large']['count'] += 1;
-                            $classCount['large']['data'][] = $tmp['id'];
-                        }
-                    }else{
-                        $classCount['default']['count'] += 1;
-                        $classCount['default']['data'][] = $tmp['id'];
-                    }
-                    if($tmp['class'] == 'default'){
-                        array_push($ids,$tmp['id']);
-                    }
-                    $arr['ids'] = $ids;
-                    $arr['count'] = $classCount;
                     $arr['data'][$tmp['id']] = $tmp;
                 }
             }

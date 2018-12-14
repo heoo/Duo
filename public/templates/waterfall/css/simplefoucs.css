@@ -1,39 +1,69 @@
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
-.bannerbox {width: 90%; height: 90%;  overflow: hidden; margin: 0px auto; overflow-x: hidden; overflow-y: hidden; }
-#dowebok { width: 90%; height: 90%;  clear: both; overflow: hidden; position: absolute; float: left;overflow-x: hidden;overflow-y: hidden; }
-#dowebok ul { width: 100%; height: 75%; float: left; position: absolute; clear: both; padding: 0px; margin: 0px auto; }
+.bannerbox { width: 100%; height: 100%;  overflow: hidden; margin: 0px auto; }
+#dowebok { width: 100%; height: 100%;  clear: both; overflow: hidden; position: absolute; float: left; }
+#dowebok ul { width: 100%; height: 100%; float: left; position: absolute; clear: both; padding: 0px; margin: 0px; }
 #dowebok ul li { float: left;  height: 100%; overflow: hidden; position: relative; padding: 0px; margin: 0px; background-size:cover; background-position:center center;background-repeat: no-repeat;display:block}
 #dowebok ul li  img{   height: 100%;  padding: 0px; margin: 0px; }
-#dowebok .preNext { width: 550px; height: 100%; position: absolute; top: -14.5%; cursor: pointer; }
+#dowebok .preNext { width: 550px; height: 100%; position: absolute; top: 0px; cursor: pointer; }
 #dowebok .cpre { left: 0; background: url(/templates/duo-i/images/left.png) no-repeat left center; opacity: 0.5; }
 #dowebok .cnext { right: 0; background: url(/templates/duo-i/images/right.png) no-repeat right center; opacity: 0.5; }
-.vidio-alert img{ opacity: 0.5;}
 
 .vidio-alert{
     position: absolute;
-    left: 125px;
-    top: 51%;
+    left: 2.5%;
+    top: 71.5%;
     margin-left: 0;
     margin-top: -13px;
     z-index: 9999999;
     width: 49px;
     height: 25px;
 }
-
 iframe{position: absolute;top: 0;
     left:0;
     z-index:999;
-    width:100%;height: 100%;
+    width:100%;
+    height: 100%;
 }
+/*视频弹框*/
 .mydiv2 {
     position: fixed !important;
     top: 150px;
     width: 100%;
     z-index: 1000;
 }
-.menus{
-    /*height: 150px;*/
-    padding-left: 20px;
+.tc_x {
+    background: none repeat scroll 0 0 #000;
+    height: 528px;
+    margin: 0 auto;
+    padding: 2px 25px 10px;
+    text-align: center;
+    width: 680px;
 }
+
+.tc_x span {
+    display: block;
+    line-height: 32px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.tc_x span a {
+    color: #ccc;
+    cursor: pointer;
+    background: #cecece;
+}
+
+.bg {
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: -1000;
+    filter:alpha(opacity=70);
+}
+
